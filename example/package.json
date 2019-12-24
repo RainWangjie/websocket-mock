@@ -1,0 +1,13 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "ws-mock": "link:.."
+  },
+  "scripts": {
+    "client": "parcel index.html"
+  },
+  "license": "MIT"
+}

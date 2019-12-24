@@ -1,5 +1,5 @@
 export interface IWSTask<T> {
-  time: number // 执行间隔,0/-1仅发送一次
+  time?: number // 执行间隔,0/-1仅发送一次
   sendType: string // 发送/订阅信息类型
   messageType: string // 消息类型
   unRegisterType?: string // 取消订阅

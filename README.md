@@ -4,11 +4,15 @@
 - 按时间序列向外部推送 mock 数据；
 - 添加 mock 任务，addTask；
 - 管理时间序列；
-- 更具订阅内容，动态调整 mock 数据的产出；
+- 根据订阅内容，动态调整 mock 数据的产出；
 
 ## 调用方式
 
 默认提供一套交通项目使用 ws 数据帧 sender、receiver 处理函数
+
+## 引入
+
+`yarn add git+http://ws-mock:i6eNxxGkzK6Y-NzizUKt@git.tianrang-inc.com/TR-FRONT/ws-mock.git#master`
 
 ## 示例
 
@@ -38,7 +42,7 @@ type Setting = {
 
 // WSTask
 interface WSTask<T> {
-  time: number; // 执行间隔
+  time?: number; // 执行间隔，不传值仅触发一次task
   sendType: string; // 发送信息类型
   messageType: string; // 消息类型
   unRegisterType?: string; // 取消订阅
@@ -57,3 +61,7 @@ private timeLineTask: {
 // task存储
 private wsTaskList: WSTask<any>[] = [];
 ```
+
+## TODOLIST
+
+- [ ] 时间管理与事件触发用 worker 管理

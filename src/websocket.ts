@@ -4,7 +4,8 @@ import _eventBus from './event-bus'
 import WsMock from '.'
 import { mockSocketUrls, mockSocketSettings } from './mock-store'
 
-const _WebSocket = window['WebSocket']
+const _WebSocket = (window as any)['WebSocket']
+const onEvents = ['close', 'error', 'message', 'open']
 
 // Override native
 class WebSocket extends _EventTarget {
@@ -83,6 +84,7 @@ class WebSocket extends _EventTarget {
 
     const WS = new _WebSocket(url, protocols)
 
+    // @ts-ignore
     return WS
   }
 
@@ -231,7 +233,6 @@ class WebSocket extends _EventTarget {
   }
 
   _observeOnEvents() {
-    const onEvents = ['close', 'error', 'message', 'open']
     onEvents.map(event => {
       let eventIndex: number
       let handler: any = null
@@ -305,6 +306,7 @@ class WebSocket extends _EventTarget {
         })
       },
     })
+    // @ts-ignore
     this[`_${propName}`] = defaultValue
   }
 

@@ -23,7 +23,7 @@ const nodeEnv = process.env.NODE_ENV
 export default [
   // 组件包
   {
-    input: 'index.ts',
+    input: './src/index.ts',
     output: [
       {
         file: main,
