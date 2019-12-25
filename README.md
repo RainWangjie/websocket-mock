@@ -10,10 +10,6 @@
 
 默认提供一套交通项目使用 ws 数据帧 sender、receiver 处理函数
 
-## 引入
-
-`yarn add git+http://ws-mock:i6eNxxGkzK6Y-NzizUKt@git.tianrang-inc.com/TR-FRONT/ws-mock.git#master`
-
 ## 示例
 
 ```js
