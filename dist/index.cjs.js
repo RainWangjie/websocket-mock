@@ -1,5 +1,5 @@
 /*!
- * ws-mock v1.0.0 by Mr.Rain🌹
+ * websocket-mock v1.0.1 by Mr.Rain🌹
  * (c) 2019-2019 
  * http://git.tianrang-inc.com:TR-FRONT/ws-mock.git
  * Released under the MIT License.

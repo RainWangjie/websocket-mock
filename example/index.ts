@@ -1,4 +1,4 @@
-import wsm from 'ws-mock'
+import wsm from 'websocket-mock'
 
 const url = `ws://${document.location.host}/hzv2/websocket/traffic/service/ws`
 
